@@ -2,26 +2,76 @@
 <html>
 <head>
   <title>MAASH Studio</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background: black;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .buttons button:hover {
+      background: #555;
+    }
+
+    #imageContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #imageContainer img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    #imageContainer img:hover {
+      transform: scale(1.05);
+    }
+
+    #result {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>MAASH Studio</h1>
+<h1>MAASH Studio 👗</h1>
 
-<input id="occasion" placeholder="Enter occasion (casual, party, wedding)">
-<br><br>
-
-<button onclick="generateDesign()">Generate</button>
+<div class="buttons">
+  <button onclick="generateDesign('casual')">Casual</button>
+  <button onclick="generateDesign('party')">Party</button>
+  <button onclick="generateDesign('wedding')">Wedding</button>
+</div>
 
 <p id="result"></p>
 
-<img id="designImage" width="300" style="display:none;">
+<div id="imageContainer"></div>
 
 <script>
-function generateDesign() {
+function generateDesign(occasion) {
 
-  let occasion = document.getElementById("occasion").value.toLowerCase();
-  let image = document.getElementById("designImage");
+  let container = document.getElementById("imageContainer");
 
   let casual = [
     "casual.jpg.jpeg",
@@ -57,19 +107,20 @@ function generateDesign() {
   } 
   else if (occasion === "wedding") {
     selectedList = wedding;
-  } 
-  else {
-    selectedList = casual;
   }
 
-  let randomIndex = Math.floor(Math.random() * selectedList.length);
+  // clear old images
+  container.innerHTML = "";
 
-  image.src = selectedList[randomIndex];
+  // show all images
+  selectedList.forEach(function(imgName) {
+    let img = document.createElement("img");
+    img.src = imgName;
+    container.appendChild(img);
+  });
 
   document.getElementById("result").innerText =
-    "✨ Design for: " + occasion;
-
-  image.style.display = "block";
+    "✨ Showing " + occasion + " designs";
 }
 </script>
 
