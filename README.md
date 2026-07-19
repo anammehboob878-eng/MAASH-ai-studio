@@ -47,7 +47,7 @@ If the user types "wedding", the app suggests formal/traditional outfits and dis
 ---
 
 ## 📸 Screenshots
-(Add screenshots like this)
+(Add real images like this 👇)
 
 ![Home](home.png)  
 ![Wedding](wedding.png)  
