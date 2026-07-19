@@ -58,9 +58,12 @@
 
 <h1>MAASH Studio 👗</h1>
 <p>Get outfit ideas for every occasion 👗</p>
+
 <input id="userInput" placeholder="Describe your occasion (e.g. wedding in summer)">
 <br><br>
+
 <button onclick="getSuggestion()">Get AI Suggestion</button>
+
 <div class="buttons">
   <button onclick="generateDesign('casual')">Casual</button>
   <button onclick="generateDesign('party')">Party</button>
@@ -72,6 +75,8 @@
 <div id="imageContainer"></div>
 
 <script>
+
+// SHOW IMAGES FUNCTION
 function generateDesign(occasion) {
 
   let container = document.getElementById("imageContainer");
@@ -121,11 +126,11 @@ function generateDesign(occasion) {
     img.src = imgName;
     container.appendChild(img);
   });
-
-  document.getElementById("result").innerText =
-    "✨ Showing " + occasion + " designs";
 }
-  function getSuggestion() {
+
+
+// AI FUNCTION
+function getSuggestion() {
 
   let input = document.getElementById("userInput").value.toLowerCase();
   let result = document.getElementById("result");
@@ -146,6 +151,7 @@ function generateDesign(occasion) {
     result.innerText = "✨ Try something stylish and comfortable!";
   }
 }
+
 </script>
 
 </body>
