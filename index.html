@@ -125,6 +125,27 @@ function generateDesign(occasion) {
   document.getElementById("result").innerText =
     "✨ Showing " + occasion + " designs";
 }
+  function getSuggestion() {
+
+  let input = document.getElementById("userInput").value.toLowerCase();
+  let result = document.getElementById("result");
+
+  if (input.includes("wedding")) {
+    result.innerText = "💍 Try elegant traditional wear like lehenga or formal dress.";
+    generateDesign("wedding");
+  }
+  else if (input.includes("party")) {
+    result.innerText = "🎉 Go for stylish outfits like gowns or trendy western wear.";
+    generateDesign("party");
+  }
+  else if (input.includes("casual")) {
+    result.innerText = "😎 Comfortable outfits like jeans and t-shirts are perfect.";
+    generateDesign("casual");
+  }
+  else {
+    result.innerText = "✨ Try something stylish and comfortable!";
+  }
+}
 </script>
 
 </body>
