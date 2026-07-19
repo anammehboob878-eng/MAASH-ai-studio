@@ -13,11 +13,11 @@ https://anammehboob878-eng.github.io/MAASH-ai-studio/
 ---
 
 ## ✨ Features
-- AI-based outfit suggestion system
-- Categories: Casual, Party, Wedding
-- Displays 5 outfit designs for each category
-- Interactive buttons for quick selection
-- Simple and user-friendly interface
+- AI-based outfit suggestion system  
+- Categories: Casual, Party, Wedding  
+- Displays 5 outfit designs for each category  
+- Interactive buttons for quick selection  
+- Simple and user-friendly interface  
 
 ---
 
@@ -25,35 +25,39 @@ https://anammehboob878-eng.github.io/MAASH-ai-studio/
 The app includes a simple AI system based on user input.
 
 It reads keywords like:
-- wedding
-- party
-- casual
+- wedding  
+- party  
+- casual  
 
 Based on the keyword, it:
-1. Generates outfit suggestions
-2. Shows related outfit images
+1. Generates outfit suggestions  
+2. Shows related outfit images  
 
-Example:
+**Example:**  
 If the user types "wedding", the app suggests formal/traditional outfits and displays wedding designs.
 
 ---
 
 ## 🛠 Tools & Technologies Used
-- HTML
-- CSS
-- JavaScript
-- GitHub Pages (Deployment)
+- HTML  
+- CSS  
+- JavaScript  
+- GitHub Pages (Deployment)  
 
 ---
 
 ## 📸 Screenshots
-(Add screenshots here later)
+(Add screenshots like this)
+
+![Home](home.png)  
+![Wedding](wedding.png)  
+![Party](party.png)  
 
 ---
 
 ## ▶️ How to Run
-1. Download or clone the repository
-2. Open `index.html` in your browser
+1. Download or clone the repository  
+2. Open `index.html` in your browser  
 
 ---
 
