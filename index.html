@@ -1,0 +1,55 @@
+<script>
+function generateDesign() {
+
+  let occasion = document.getElementById("occasion").value.toLowerCase();
+  let image = document.getElementById("designImage");
+
+  let casual = [
+    "casual.jpg.jpeg",
+    "casual1.jpg.jpeg",
+    "casual2.jpg.jpeg",
+    "casual3.jpg.jpeg",
+    "casual4.jpg.jpeg"
+  ];
+
+  let party = [
+    "party.jpg.jpeg",
+    "party1.jpg.jpeg",
+    "party2.jpg.jpeg",
+    "party3.jpg.jpeg",
+    "party4.jpg.jpeg"
+  ];
+
+  let wedding = [
+    "wedding.jpg.jpeg",
+    "wedding1.jpg.jpeg",
+    "wedding2.jpg.jpeg",
+    "wedding3.jpg.jpeg",
+    "wedding4.jpg.jpeg"
+  ];
+
+  let selectedList;
+
+  if (occasion === "casual") {
+    selectedList = casual;
+  } 
+  else if (occasion === "party") {
+    selectedList = party;
+  } 
+  else if (occasion === "wedding") {
+    selectedList = wedding;
+  } 
+  else {
+    selectedList = casual;
+  }
+
+  let randomIndex = Math.floor(Math.random() * selectedList.length);
+
+  image.src = selectedList[randomIndex];
+
+  document.getElementById("result").innerText =
+    "✨ Design for: " + occasion;
+
+  image.style.display = "block";
+}
+</script>
