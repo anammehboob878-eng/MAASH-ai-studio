@@ -49,9 +49,10 @@ If the user types "wedding", the app suggests formal/traditional outfits and dis
 ## 📸 Screenshots
 (Add real images like this 👇)
 
-![Home](home.png)  
-![Wedding](wedding.png)  
-![Party](party.png)  
+- Home Page (main screen with input & buttons)
+- Casual Result
+- Party Result
+- Wedding Result
 
 ---
 
